@@ -73,6 +73,10 @@
 
             access_log /var/log/nginx/website-name.log;
 
+            location /media/ {
+                alias /opt/myproject/myproject/path-to-media/;
+            }
+
             location /static/ {
                 alias /opt/myproject/myproject/path-to-static-files/;
             }
@@ -139,6 +143,10 @@
             server_name yourdomain.com www.yourdomain.com;
 
             access_log /var/log/nginx/website-name.log;
+
+            location /media/ {
+                alias /opt/myproject/myproject/path-to-media/;
+            }
 
             location /static/ {
                 alias /opt/myproject/myproject/path-to-static-files/;
